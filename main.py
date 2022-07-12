@@ -2,7 +2,7 @@ import maya.cmds as cmds
 import random
 
 
-def RandomCount(typeofval):
+def RandomCount(a, b):
 
     LocationVal = []
     ScalVal = []
@@ -76,6 +76,6 @@ def ReturnRange(listofvalran):
     return a, b
 
 
-print(GetRangeVec(GetVecVal(4)))
+print(RandomCount(ReturnRange(GetRangeVec(GetVecVal(4)))))
 print(GetRangeVec(GetVecVal(4))[0][0])
 print(GetRangeVec(GetVecVal(4))[0][-1])
