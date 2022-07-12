@@ -102,7 +102,7 @@ def mainfuc(a, temp):
     return asResul
 
 
-a = int(input("값을 입력받을 큐브의 갯수"))
+a = int(input("값을 입력받을 큐브의 갯수\n"))
 temp = int(input("만들 좌표의 갯수\n"))
 
 print(mainfuc(a, temp))
