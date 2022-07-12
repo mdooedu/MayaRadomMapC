@@ -77,11 +77,26 @@ def ReturnRange(listofvalran):  # listofvalran은 정렬 된 큐브의 좌표값
     return xRange, yRange, zRange
 
 
+def ReturnFinalRnaVal(listreturn, targetcount):
+    uniDB = []
+
+    x = count_gen(listreturn[0][0], listreturn[0][1], targetcount)
+    y = count_gen(listreturn[1][0], listreturn[1][1], targetcount)
+    z = count_gen(listreturn[2][0], listreturn[2][1], targetcount)
+
+    for i in range(targetcount):
+        uniDB.append([x[0], y[0], z[0]])
+        x.pop(0)
+        y.pop(0)
+        z.pop(0)
+
+    return uniDB
+
+
 a = GetVecVal(4)
 print(a)
 b = GetRangeVec(a)
 print(b)
 c = ReturnRange(b)
 print(c)
-
-print(count_gen(c[0][0], c[0][1], 10))
+print(ReturnFinalRnaVal(c, 10))
