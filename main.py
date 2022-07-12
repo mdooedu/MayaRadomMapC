@@ -76,6 +76,9 @@ def ReturnRange(listofvalran):
     return a, b
 
 
-print(ReturnRange(GetRangeVec(GetVecVal(4))))
-print(GetRangeVec(GetVecVal(4))[0][0])
-print(GetRangeVec(GetVecVal(4))[0][-1])
+a = GetVecVal(4)
+print(a)
+b = GetRangeVec(a)
+print(b)
+c = ReturnRange(b)
+print(c)
