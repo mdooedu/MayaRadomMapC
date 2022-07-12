@@ -2,7 +2,7 @@ import maya.cmds as cmds
 import random
 
 
-def RandomCount(a, b):
+def RandomCount(typeofval):
 
     LocationVal = []
     ScalVal = []
@@ -12,7 +12,25 @@ def RandomCount(a, b):
     y = float(random.randrange(a, b))
     z = float(random.randrange(a, b))
 
-    return x, y, z
+    if typeofval == 1:
+
+        LocationVal.append(x)
+        LocationVal.append(y)
+        LocationVal.append(z)
+
+    elif typeofval == 2:
+
+        ScalVal.append(x)
+        ScalVal.append(y)
+        ScalVal.append(z)
+
+    else:
+
+        RotationValappend(x)
+        RotationValappend(y)
+        RotationValappend(z)
+
+    return LocationVal, ScalVal, RotationVal
 
 
 # 큐브 1~n 값의 로케이션 값 저장 후 반환
@@ -50,4 +68,14 @@ def GetRangeVec(xyzlist):
     return xRange, yRange, zRange
 
 
+def ReturnRange(listofvalran):
+
+    a = listofvalran[0][0]
+    b = listofvalran[0][-1]
+
+    return a, b
+
+
 print(GetRangeVec(GetVecVal(4)))
+print(GetRangeVec(GetVecVal(4))[0][0])
+print(GetRangeVec(GetVecVal(4))[0][-1])
