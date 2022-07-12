@@ -4,11 +4,18 @@ import random
 
 def RandomCount(a, b):
 
+    LocationVal = []
+    ScalVal = []
+    RotationVal = []
+
     x = float(random.randrange(a, b))
     y = float(random.randrange(a, b))
     z = float(random.randrange(a, b))
 
     return x, y, z
+
+
+# 큐브 1~n 값의 로케이션 값 저장 후 반환
 
 
 def GetVecVal(count):
@@ -30,6 +37,8 @@ def GetVecVal(count):
             zLocation.append(cmds.getAttr("pCube" + str(i) + ".translateZ"))
 
     return xLocation, yLocation, zLocation
+
+# 입력받은 리스트 정령후 반환
 
 
 def GetRangeVec(xyzlist):
