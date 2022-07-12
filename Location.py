@@ -93,7 +93,7 @@ def ReturnFinalRnaVal(listreturn, targetcount):  # xyz값을 순서대로 오브
     return uniDB
 
 
-def mainfuc(a, temp):
+def mainFucLoc(a, temp):
 
     b = GetVecVal(a)  # 오브젝트의 좌표값을 호출받음
     c = GetRangeVec(b)  # 입력 받은 값 정렬
@@ -101,9 +101,3 @@ def mainfuc(a, temp):
     asResul = ReturnFinalRnaVal(d, temp)  # 랜덤값 생성 및 반환 후 오브젝트 입력값 순서로 재정렬
 
     return asResul  # 최종 범위 내에서 랜덤 생성된 값 x, y, z순으로 인덱스 반환
-
-
-a = int(input("값을 입력받을 큐브의 갯수\n"))
-temp = int(input("만들 좌표의 갯수\n"))
-
-print(mainfuc(a, temp))
