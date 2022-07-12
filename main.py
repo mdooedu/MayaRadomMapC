@@ -2,15 +2,15 @@ import maya.cmds as cmds
 import random
 
 
-def RandomCount(ranct):
+def RandomCount(typeofval):
 
     LocationVal = []
     ScalVal = []
     RotationVal = []
 
-    x = float(random.randrange(ranct))
-    y = float(random.randrange(ranct))
-    z = float(random.randrange(ranct))
+    x = float(random.randrange(a, b))
+    y = float(random.randrange(a, b))
+    z = float(random.randrange(a, b))
 
     if typeofval == 1:
 
