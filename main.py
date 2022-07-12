@@ -40,7 +40,7 @@ def GetVecVal(count):
 
     return xLocation, yLocation, zLocation
 
-# 입력받은 리스트 정령후 반환
+# 입력받은 리스트 정렬후 반환
 
 
 def GetRangeVec(xyzlist):
@@ -54,10 +54,29 @@ def GetRangeVec(xyzlist):
 
 def ReturnRange(listofvalran):
 
-    a = listofvalran[0][0]
-    b = listofvalran[0][-1]
+    xRange = []
+    yRange = []
+    zRange = []
+    i = 0
 
-    return a, b
+    for p in range(3):  # x,y,z 리스트의 최소 최대값 반환
+
+        i += 1
+
+        a = listofvalran[p][0]
+        b = listofvalran[p][-1]
+
+        if i == 1:
+            xRange.append(a)
+            xRange.append(b)
+        elif i == 2:
+            yRange.append(a)
+            yRange.append(b)
+        else:
+            zRange.append(a)
+            zRange.append(b)
+
+    return xRange, yRange, zRange
 
 
 a = GetVecVal(4)
@@ -66,7 +85,3 @@ b = GetRangeVec(a)
 print(b)
 c = ReturnRange(b)
 print(c)
-d = c[-1]
-f = c[0]
-
-print(count_gen(f, d, 10))
