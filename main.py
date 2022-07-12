@@ -26,9 +26,9 @@ def RandomCount(ranct):
 
     else:
 
-        RotationValappend(x)
-        RotationValappend(y)
-        RotationValappend(z)
+        RotationVal.append(x)
+        RotationVal.append(y)
+        RotationVal.append(z)
 
     return LocationVal, ScalVal, RotationVal
 
