@@ -2,35 +2,19 @@ import maya.cmds as cmds
 import random
 
 
-def RandomCount(typeofval):
-
-    LocationVal = []
-    ScalVal = []
-    RotationVal = []
-
-    x = float(random.randrange(a, b))
-    y = float(random.randrange(a, b))
-    z = float(random.randrange(a, b))
-
-    if typeofval == 1:
-
-        LocationVal.append(x)
-        LocationVal.append(y)
-        LocationVal.append(z)
-
-    elif typeofval == 2:
-
-        ScalVal.append(x)
-        ScalVal.append(y)
-        ScalVal.append(z)
-
-    else:
-
-        RotationVal.append(x)
-        RotationVal.append(y)
-        RotationVal.append(z)
-
-    return LocationVal, ScalVal, RotationVal
+def count_gen(a, b, target_count):
+    # TargetCount = int(input("target count:\n"))  # count of object to making
+    # a = float(input("범위변수_1:\n"))
+    # b = float(input("범위변수_2:\n"))
+    db = []
+    i = 0
+    for i in range(target_count):
+        i += 1
+        x = random.uniform(a, b)  # VerT return num
+        y = random.uniform(a, b)  # VerT return num
+        z = random.uniform(a, b)  # VerT return num
+        db.append([x, y, z])
+    return db
 
 
 # 큐브 1~n 값의 로케이션 값 저장 후 반환
@@ -82,5 +66,7 @@ b = GetRangeVec(a)
 print(b)
 c = ReturnRange(b)
 print(c)
-d = ReturnRange(c)
-print(d)
+d = c[-1]
+f = c[0]
+
+print(count_gen(f, d, 10))
