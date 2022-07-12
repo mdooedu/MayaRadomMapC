@@ -76,6 +76,6 @@ def ReturnRange(listofvalran):
     return a, b
 
 
-print(RandomCount(ReturnRange(GetRangeVec(GetVecVal(4)))))
+print(ReturnRange(GetRangeVec(GetVecVal(4))))
 print(GetRangeVec(GetVecVal(4))[0][0])
 print(GetRangeVec(GetVecVal(4))[0][-1])
