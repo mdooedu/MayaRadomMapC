@@ -10,10 +10,8 @@ def count_gen(a, b, target_count):
     i = 0
     for i in range(target_count):
         i += 1
-        x = random.uniform(a, b)  # VerT return num
-        y = random.uniform(a, b)  # VerT return num
-        z = random.uniform(a, b)  # VerT return num
-        db.append([x, y, z])
+        temp = random.uniform(a, b)  # VerT return num
+        db.append(temp)
     return db
 
 
