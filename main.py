@@ -85,3 +85,5 @@ b = GetRangeVec(a)
 print(b)
 c = ReturnRange(b)
 print(c)
+
+print(count_gen(c[0][0], c[0][1], 10))
