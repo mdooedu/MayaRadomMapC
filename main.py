@@ -93,10 +93,16 @@ def ReturnFinalRnaVal(listreturn, targetcount):  # xyz값을 순서대로 오브
     return uniDB
 
 
-a = GetVecVal(4)
-print(a)
-b = GetRangeVec(a)
-print(b)
-c = ReturnRange(b)
-print(c)
-print(ReturnFinalRnaVal(c, 10))
+def mainfuc(a, temp):
+    b = GetVecVal(a)  # 오브젝트의 좌표값을 호출받음
+    c = GetRangeVec(b)  # 입력 받은 값 정렬
+    d = ReturnRange(c)  # 정령된 리스트의 최소 최댓값 반환
+    asResul = ReturnFinalRnaVal(d, temp)  # 랜덤값 생성 및 반환 후 오브젝트 입력값 순서로 재정렬
+
+    return asResul
+
+
+a = int(input("값을 입력받을 큐브의 갯수"))
+temp = int(input("만들 좌표의 갯수"))
+
+print(mainfuc(a, temp))
