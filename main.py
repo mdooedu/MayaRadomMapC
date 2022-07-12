@@ -77,7 +77,7 @@ def ReturnRange(listofvalran):  # listofvalran은 정렬 된 큐브의 좌표값
     return xRange, yRange, zRange
 
 
-def ReturnFinalRnaVal(listreturn, targetcount):
+def ReturnFinalRnaVal(listreturn, targetcount):  # xyz값을 순서대로 오브젝트상 적용 가능하게 통합
     uniDB = []
 
     x = count_gen(listreturn[0][0], listreturn[0][1], targetcount)
