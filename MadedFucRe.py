@@ -77,8 +77,8 @@ def ReturnRange(listofvalran):  # listofvalran은 정렬 된 큐브의 좌표값
     return xRange, yRange, zRange
 
 
-def ReturnFinalRnaVal(listreturn, targetcount):  # xyz값을 순서대로 오브젝트상 적용 가능하게 통합
-    uniDB = []
+def ReturnFinalRnaVal(listreturn, targetcount):
+    uniDB = []  # xyz값을 순서대로 오브젝트상 적용 가능하게 통합
 
     x = count_gen(listreturn[0][0], listreturn[0][1], targetcount)
     y = count_gen(listreturn[1][0], listreturn[1][1], targetcount)
@@ -93,6 +93,30 @@ def ReturnFinalRnaVal(listreturn, targetcount):  # xyz값을 순서대로 오브
     return uniDB
 
 
+def GetVecValScl():  # frequency는 반환 받은 스케일의 중간값 반환
+    xyzScale = []
+    temp = [1, 2]
+
+    for i in temp:  # pCube의 좌표값을 번호대호 반환 반복
+        p = cmds.getAttr("Scale" + str(i) + ".scale")  # 좌표값이 튜플로 입력됨
+        print(p)
+        xyzScale.append(list(p[0]))  # 튜플로 들어온 좌표값 리스트로 변환후 반환
+
+    return xyzScale  # 리스트 안의 리스트로 반환
+
+
+def xyzRange(xyzListRe):
+    xyzRangeList = []
+    temp = range(3)  # xyz값 모두를 반환 하기 위한 상수
+
+    for i in temp:
+        a = xyzListRe[0][0]
+        b = xyzListRe[1][0]
+        xyzRangeList.append([a, b])  # xyz값 각각 세트로 반환
+
+    return xyzRangeList
+
+
 def mainFucLoc(a, temp):
 
     b = GetVecValLoc(a)  # 오브젝트의 좌표값을 호출받음
@@ -101,3 +125,12 @@ def mainFucLoc(a, temp):
     asResul = ReturnFinalRnaVal(d, temp)  # 랜덤값 생성 및 반환 후 오브젝트 입력값 순서로 재정렬
 
     return asResul  # 최종 범위 내에서 랜덤 생성된 값 x, y, z순으로 인덱스 반환
+
+
+def mainFucScl(temp):
+    a = GetVecValScl()  # 오브젝트 스케일값 입력후 반환
+    b = xyzRange(a)  # 입력받은 스케일 좌표값 x,y,z 범위로 정렬
+    c = ReturnFinalRnaVal(b, temp)
+
+    return c  # 랜덤하게 반환된 좌표값 반환
+
