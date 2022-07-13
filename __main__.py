@@ -1,4 +1,3 @@
-import maya.cmds as cmds
 from MadedFucRe import *
 
 
