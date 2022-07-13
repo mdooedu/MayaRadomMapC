@@ -27,4 +27,15 @@ def GetVecVal():  # frequency는 반환 받은 스케일의 중간값 반환
     return xyzScale  # 리스트 안의 리스트로 반환
 
 
-print(GetVecVal())
+def xyzRange(xyzListRe):
+    xyzRangeList = []
+    temp = range(2)
+
+    for i in temp:
+
+        a = xyzListRe[0][0]
+        b = xyzListRe[1][0]
+        xyzRangeList.append(a, b)
+
+
+print(xyzRange(GetVecVal()))
