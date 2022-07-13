@@ -10,5 +10,5 @@ b = mainFucScl(temp)  # 랜덤 반환된 사이즈값
 
 CreatRelocate(a, b, temp)
 '''
-정상출력 확인 mainFucLoc, mainFucScl
+정상출력 확인 mainFucLoc, mainFucScl, CreatReLocate
 '''
