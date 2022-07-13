@@ -12,10 +12,10 @@ def creatReturnLocation(a, temp):
 
     reBDtoin.append(mainFucLoc(a, temp))  # 랜덤 로케이션 반환값
 
-    for i in temp:
+    for i in range(temp):
 
         temp += 1
-        iNam = str(temp)
+        iNam = str(i)
         nam = "pSphere1"
         tran = nam + iNam + '.translate'
         rot = nam + iNam + '.rotate'

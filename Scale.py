@@ -15,7 +15,7 @@ def count_gen(a, b, target_count):
     return db
 
 
-def GetVecVal():  # frequency는 반환 받은 스케일의 중간값 반환
+def GetVecValScl():  # frequency는 반환 받은 스케일의 중간값 반환
     xyzScale = []
     temp = [1, 2]
 
@@ -56,7 +56,7 @@ def ReturnFinalRnaVal(xyzRangeList, targetcount):
 
 
 def mainFucScl(temp):
-    a = GetVecVal()  # 오브젝트 스케일값 입력후 반환
+    a = GetVecValScl()  # 오브젝트 스케일값 입력후 반환
     b = xyzRange(a)  # 입력받은 스케일 좌표값 x,y,z 범위로 정렬
     c = ReturnFinalRnaVal(b, temp)
 
