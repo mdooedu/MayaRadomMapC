@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcc3f248-894b-48b3-8f34-302c8cc8f134" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/MadedFucRe.py" beforeDir="false" afterPath="$PROJECT_DIR$/MadedFucRe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <workItem from="1657638913773" duration="43000" />
       <workItem from="1657668500910" duration="1685000" />
       <workItem from="1657670193562" duration="5685000" />
-      <workItem from="1657676266138" duration="1170000" />
+      <workItem from="1657676266138" duration="1630000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1657631359362</created>
@@ -381,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657677291766</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary=".">
+      <created>1657677629711</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1657677629711</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
