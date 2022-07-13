@@ -29,15 +29,30 @@ def GetVecVal():  # frequency는 반환 받은 스케일의 중간값 반환
 
 def xyzRange(xyzListRe):
     xyzRangeList = []
-    temp = range(2)
+    temp = range(3)  # xyz값 모두를 반환 하기 위한 상수
 
     for i in temp:
         a = xyzListRe[0][0]
         b = xyzListRe[1][0]
-        xyzRangeList.append(a)
-        xyzRangeList.append(b)
+        xyzRangeList.append([a, b])  # xyz값 각각 세트로 반환
 
     return xyzRangeList
+
+
+def ReturnFinalRnaVal(xyzRangeList, targetcount):  # xyz값을 순서대로 오브젝트상 적용 가능하게 통합
+    uniDBs = []
+
+    x = count_gen(xyzRangeList[0][0], xyzRangeList[0][1], targetcount)
+    y = count_gen(xyzRangeList[1][0], xyzRangeList[1][1], targetcount)
+    z = count_gen(xyzRangeList[2][0], xyzRangeList[2][1], targetcount)
+
+    for i in range(targetcount):
+        uniDBs.append([x[0], y[0], z[0]])  # 좌표값 리스트 0번 인덱스 오브젝트 인덱스 0번으로 입력
+        x.pop(0)  # 입력한 인덱스 값 삭제 추후 pop값 로그로 출력모듈 도입
+        y.pop(0)
+        z.pop(0)
+
+    return uniDBs
 
 
 print(xyzRange(GetVecVal()))
