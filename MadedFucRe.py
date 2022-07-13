@@ -133,3 +133,29 @@ def mainFucScl(temp):
 
     return c  # 랜덤하게 반환된 좌표값 반환
 
+
+def CreatRelocate(ranlocin, ransclin, temp):
+    RanLocDB = ranlocin
+    RanSclDB = ransclin
+
+    for i in range(temp):
+
+        temp += 1
+        iNam = str(i)
+        nam = "pSphere"
+        tran = nam + iNam + '.translate'
+        rot = nam + iNam + '.rotate'
+        sca = nam + iNam + '.scale'
+        x_01 = RanLocDB.pop([0][0])
+        y_01 = RanLocDB.pop([0][0])
+        z_01 = RanLocDB.pop([0][0])
+        x_02 = RanSclDB.pop([0][0])
+        y_02 = RanSclDB.pop([0][0])
+        z_02 = RanSclDB.pop([0][0])
+        print(x_01, y_01, z_01)
+        cmds.duplicate(nam)
+        cmds.setAttr(tran, x_01, y_01, z_01)
+        cmds.setAttr(sca, x_02, y_02, z_02)
+
+    return
+
