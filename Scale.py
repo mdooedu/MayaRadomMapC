@@ -56,8 +56,8 @@ def ReturnFinalRnaVal(xyzRangeList, targetcount):
 
 
 def mainFucScl(temp):
-    a = GetVecVal()
-    b = xyzRange(a)
+    a = GetVecVal()  # 오브젝트 스케일값 입력후 반환
+    b = xyzRange(a)  # 입력받은 스케일 좌표값 x,y,z 범위로 정렬
     c = ReturnFinalRnaVal(b, temp)
 
     return c  # 랜덤하게 반환된 좌표값 반환
