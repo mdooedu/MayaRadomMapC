@@ -1,6 +1,5 @@
 import maya.cmds as cmds
-from Location import *
-from Scale import *
+from MadedFucRe import *
 
 
 a = int(input("값을 입력받을 큐브의 갯수\n"))
