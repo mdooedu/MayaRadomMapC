@@ -52,7 +52,7 @@ def ReturnFinalRnaVal(xyzRangeList, targetcount):  # xyz값을 순서대로 오�
         y.pop(0)
         z.pop(0)
 
-    return uniDBs
+    return uniDBs  # 랜덤 사이즈값 반환
 
 
-print(xyzRange(GetVecVal()))
+print(ReturnFinalRnaVal(xyzRange(GetVecVal()), 10))
