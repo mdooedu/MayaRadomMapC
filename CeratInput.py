@@ -35,6 +35,8 @@ def CreatRelocate(ranlocin, ransclin, temp):
 '''
 이름 입력값 에러 확인
 이전 함수 정상 구현
+29번 행렬에서 에러확인 
+# Error: RuntimeError: file <maya console> line 157: setAttr: Error reading data element number 1: [3.3085998401400776, -3.29712531343791, 0.7952717226266673]
 '''
 
 
