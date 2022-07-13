@@ -39,8 +39,8 @@ def xyzRange(xyzListRe):
     return xyzRangeList
 
 
-def ReturnFinalRnaVal(xyzRangeList, targetcount):  # xyz값을 순서대로 오브젝트상 적용 가능하게 통합
-    uniDBs = []
+def ReturnFinalRnaVal(xyzRangeList, targetcount):
+    uniDBs = []  # xyz값을 순서대로 오브젝트상 적용 가능하게 통합
 
     x = count_gen(xyzRangeList[0][0], xyzRangeList[0][1], targetcount)
     y = count_gen(xyzRangeList[1][0], xyzRangeList[1][1], targetcount)
@@ -55,4 +55,10 @@ def ReturnFinalRnaVal(xyzRangeList, targetcount):  # xyz값을 순서대로 오�
     return uniDBs  # 랜덤 사이즈값 반환
 
 
-print(ReturnFinalRnaVal(xyzRange(GetVecVal()), 10))
+def mainFucScl(temp):
+    a = GetVecVal()
+    b = xyzRange(a)
+    c = ReturnFinalRnaVal(b, temp)
+
+    return c  # 랜덤하게 반환된 좌표값 반환
+
