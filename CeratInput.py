@@ -10,7 +10,7 @@ def CreatRelocate(ranlocin, ransclin, temp):
     RanLocDB = ranlocin
     RanSclDB = ransclin
 
-    for i in range(temp):
+    for i in range(1, temp+1):
 
         temp += 1
         iNam = str(i)
@@ -25,11 +25,17 @@ def CreatRelocate(ranlocin, ransclin, temp):
         y_02 = RanSclDB.pop([0][0])
         z_02 = RanSclDB.pop([0][0])
         print(x_01, y_01, z_01)
-        cmds.duplicate(nam)
+        cmds.duplicate(nam + iNam)
         cmds.setAttr(tran, x_01, y_01, z_01)
         cmds.setAttr(sca, x_02, y_02, z_02)
 
     return
+
+
+'''
+이름 입력값 에러 확인
+이전 함수 정상 구현
+'''
 
 
 print(mainFucScl(temp))  # 랜덤 반환된 사이즈값

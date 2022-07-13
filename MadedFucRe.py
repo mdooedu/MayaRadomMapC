@@ -138,7 +138,7 @@ def CreatRelocate(ranlocin, ransclin, temp):
     RanLocDB = ranlocin
     RanSclDB = ransclin
 
-    for i in range(temp):
+    for i in range(1, temp+1):
 
         temp += 1
         iNam = str(i)
@@ -153,7 +153,7 @@ def CreatRelocate(ranlocin, ransclin, temp):
         y_02 = RanSclDB.pop([0][0])
         z_02 = RanSclDB.pop([0][0])
         print(x_01, y_01, z_01)
-        cmds.duplicate(nam)
+        cmds.duplicate(nam + iNam)
         cmds.setAttr(tran, x_01, y_01, z_01)
         cmds.setAttr(sca, x_02, y_02, z_02)
 
