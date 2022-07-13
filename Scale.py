@@ -22,9 +22,9 @@ def GetVecVal():  # frequency는 반환 받은 스케일의 중간값 반환
     for i in temp:  # pCube의 좌표값을 번호대호 반환 반복
         p = cmds.getAttr("Scale" + str(i) + ".scale")  # 좌표값이 튜플로 입력됨
         print(p)
-        xyzScale.append(p[0])  # 튜플로 들어온 좌표값 리스트로 변환후 반환
+        xyzScale.append(list(p[0]))  # 튜플로 들어온 좌표값 리스트로 변환후 반환
 
-    return xyzScale  # 튜플 자료형 때문에 리스트로 받고 반환됨
+    return xyzScale
 
 
 print(GetVecVal())
