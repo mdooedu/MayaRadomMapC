@@ -18,13 +18,16 @@ def CreatRelocate(ranlocin, ransclin, temp):
         tran = nam + iNam + '.translate'
         rot = nam + iNam + '.rotate'
         sca = nam + iNam + '.scale'
-        x_01 = RanLocDB.pop([0][0])
-        y_01 = RanLocDB.pop([0][0])
-        z_01 = RanLocDB.pop([0][0])
-        x_02 = RanSclDB.pop([0][0])
-        y_02 = RanSclDB.pop([0][0])
-        z_02 = RanSclDB.pop([0][0])
-        print(x_01, y_01, z_01)
+        set_01 = RanLocDB.pop([0][0])
+        set_02 = RanSclDB.pop([0][0])
+        print(set_01, set_02)
+        x_01 = set_01[0]
+        y_01 = set_01[1]
+        z_01 = set_01[2]
+        x_02 = set_02[0]
+        y_02 = set_02[1]
+        z_02 = set_02[2]
+
         cmds.duplicate(nam + iNam)
         cmds.setAttr(tran, x_01, y_01, z_01)
         cmds.setAttr(sca, x_02, y_02, z_02)
