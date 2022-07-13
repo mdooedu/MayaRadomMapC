@@ -24,7 +24,7 @@ def GetVecVal():  # frequency는 반환 받은 스케일의 중간값 반환
         print(p)
         xyzScale.append(list(p[0]))  # 튜플로 들어온 좌표값 리스트로 변환후 반환
 
-    return xyzScale
+    return xyzScale  # 리스트 안의 리스트로 반환
 
 
 print(GetVecVal())
