@@ -32,10 +32,12 @@ def xyzRange(xyzListRe):
     temp = range(2)
 
     for i in temp:
-
         a = xyzListRe[0][0]
         b = xyzListRe[1][0]
-        xyzRangeList.append(a, b)
+        xyzRangeList.append(a)
+        xyzRangeList.append(b)
+
+    return xyzRangeList
 
 
 print(xyzRange(GetVecVal()))
