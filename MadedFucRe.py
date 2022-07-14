@@ -74,6 +74,10 @@ def ReturnRange(listofvalran):  # listofvalran은 정렬 된 큐브의 좌표값
             zRange.append(a)
             zRange.append(b)
 
+    xRange.sort()
+    yRange.sort()
+    zRange.sort()
+
     return xRange, yRange, zRange
 
 
